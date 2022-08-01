@@ -12,9 +12,12 @@ def get_location():
     response = requests.get(f'https://ipapi.co/{ip_address}/json/').json()
     location_data = {
         "ip": ip_address,
+        "version": response.get("version"),
         "city": response.get("city"),
         "region": response.get("region"),
-        "country": response.get("country_name")
+        "country": response.get("country"),
+        "country_name": response.get("country_name"),
+        "country_capital": response.get("country_capital")
     }
     return location_data
 
