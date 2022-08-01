@@ -17,7 +17,10 @@ def get_location():
         "region": response.get("region"),
         "country": response.get("country"),
         "country_name": response.get("country_name"),
-        "country_capital": response.get("country_capital")
+        "country_capital": response.get("country_capital"),
+        "postal": response.get("postal"),
+        "languages": response.get("languages"),
+        "hostname": response.get("hostname")
     }
     return location_data
 
